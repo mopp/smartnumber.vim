@@ -81,6 +81,8 @@ function! smartnumber#enable()
         autocmd BufNewFile  * :call s:set_dynamic(g:snumber_mode_map.n)
         autocmd BufReadPost * :call s:set_dynamic(g:snumber_mode_map.n)
     augroup END
+
+    call s:set_dynamic(g:snumber_mode_map.n)
 endfunc
 
 
