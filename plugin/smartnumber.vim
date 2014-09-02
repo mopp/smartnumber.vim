@@ -16,9 +16,12 @@ set cpo&vim
 
 
 
-command! -nargs=0 SNumbersToggle  call smartnumber#toggle()
-command! -nargs=0 SNumbersEnable  call smartnumber#enable()
-command! -nargs=0 SNumbersDisable call smartnumber#disable()
+command! -nargs=0 SNumbersToggle          call smartnumber#toggle()
+command! -nargs=0 SNumbersEnable          call smartnumber#enable()
+command! -nargs=0 SNumbersDisable         call smartnumber#disable()
+command! -nargs=0 SNumbersTurnOffRelative call smartnumber#turnoff_relative()
+command! -nargs=0 SNumbersTurnOnRelative  call smartnumber#turnon_relative()
+command! -nargs=0 SNumbersToggleRelative  call smartnumber#toggle_relative()
 
 
 

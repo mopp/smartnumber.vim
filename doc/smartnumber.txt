@@ -39,6 +39,15 @@ COMMANDS                                    *smartnumber-commands*
 :SNumbersDisable                            *SNumbersDisable*
     disable function of this plugin.
 
+:SNumbersTurnOffRelative                    *SNumbersTurnOffRelative*
+    Turn off 'relativenumber' option of current window.
+
+SNumbersTurnOnRelative                      *SNumbersTurnOnRelative*
+    Turn on 'relativenumber' option of current window.
+
+SNumbersToggleRelative                      *SNumbersToggleRelative*
+    Toggle 'relativenumber' option of current window.
+
 
 ==============================================================================
 OPTIONS                                     *smartnumber-options*

@@ -45,20 +45,18 @@ endfunction
 
 
 function! s:set_absolute()
-    setlocal number
     setlocal norelativenumber
 endfunction
 
 
 function! s:set_relative()
     setlocal relativenumber
-    setlocal nonumber
+    setlocal number
 endfunction
 
 
 function! s:set_dynamic(is_relative)
     if s:is_adapt_current_buffer() == 0
-        echomsg string("FUCK")
         setlocal nonumber
         setlocal norelativenumber
         return
@@ -102,6 +100,29 @@ function! smartnumber#toggle()
     endif
 endfunction
 
+
+function! smartnumber#turnoff_relative()
+    if s:is_adapt_current_buffer()
+        setlocal number
+        setlocal norelativenumber
+    endif
+endfunction
+
+
+function! smartnumber#turnon_relative()
+    if s:is_adapt_current_buffer()
+        setlocal number
+        setlocal relativenumber
+    endif
+endfunction
+
+
+function! smartnumber#toggle_relative()
+    if s:is_adapt_current_buffer()
+        setlocal number
+        setlocal invrelativenumber
+    endif
+endfunction
 
 
 let &cpo = s:save_cpo
