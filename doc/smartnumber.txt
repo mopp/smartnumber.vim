@@ -1,0 +1,79 @@
+*smartnumber.txt*
+
+Author:  Mopp
+License: NYSL
+Version: 0.1
+
+
+==============================================================================
+CONTENTS                                    *smartnumber-contents*
+    Introduction                            |smartnumber-introduction|
+        Install                             |smartnumber-install|
+    Commands                                |smartnumber-commands|
+    Options                                 |smartnumber-options|
+
+
+==============================================================================
+INTRODUCTION                                *smartnumber-introduction*
+    This switchs smartly 'number' and 'relativenumber' option.
+    This is developed in Github(https://github.com/mopp/smartnumber.git).
+
+
+------------------------------------------------------------------------------
+INSTALL                                     *smartnumber-install*
+    Install the distributed files into your Vim script directory which is
+    usually $HOME/.vim. you can use Neobundle below >
+        NeoBundle 'mopp/smartnumber.vim'
+<
+
+==============================================================================
+COMMANDS                                    *smartnumber-commands*
+
+
+:SNumbersToggle                             *SNumbersToggle*
+    Toggle enable and disable.
+
+:SNumbersEnable                             *SNumbersEnable*
+    enable function of this plugin.
+
+:SNumbersDisable                            *SNumbersDisable*
+    disable function of this plugin.
+
+
+==============================================================================
+OPTIONS                                     *smartnumber-options*
+    These oprions changes Plugin behavior.
+    If you would like to change behavior, You add or change value in your
+    vimrc.
+
+g:snumber_enable_startup                        *g:snumber_enable_startup*
+        Type : Number(Bool)
+        If this is 1, This plugin enable automatically when starting vim.
+
+        Default value is 0
+
+g:snumber_mode_map                              *g:snumber_mode_map*
+        Type : Dictionary
+            Available keys of dictionary.
+                'n'
+                    Value : Number(Bool)
+                    normal mode setting
+                    If value is 1, normal mode is 'relativenumber'
+                    Default value is 1
+
+                'i'
+                    Value : Number(Bool)
+                    insert mode setting
+                    If value is 1, normal mode is 'relativenumber'
+                    Default value is 0
+
+g:snumber_check_adapt_func                      *g:snumber_check_adapt_func*
+        Type : String
+        This is string of function name for checking adaptive buffer.
+        Default function content is below. >
+            return (buflisted(a:bufnr) != 0) && (getbufvar(a:bufnr, "&buftype") == '')
+<
+
+==============================================================================
+
+vim:ts=4:ft=help:norl:
